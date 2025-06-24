@@ -5,39 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You | BÉNJAMIN&CO</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
     }
 
     body {
-      background: url('thankyou.png') no-repeat center center fixed;
-      background-size: cover;
+      background: url('thankyou.png') no-repeat center center;
+      background-size: contain;
+      background-color: #ffffff;
     }
 
     .insta-link {
       position: absolute;
-      bottom: 30px;
-      left: 53%;
+      bottom: 9%;
+      left: 50%;
       transform: translateX(-50%);
-      width: 200px;
-      height: 30px;
+      width: 160px;
+      height: 25px;
       display: block;
     }
 
-    @media screen and (max-width: 768px) {
+    @media (min-width: 769px) {
       body {
-        background-position: center top;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .insta-link {
-        bottom: 18vh;
-        left: 50%;
-        width: 160px;
-        height: 25px;
+        bottom: 5%;
+        width: 200px;
+        height: 30px;
       }
     }
   </style>
