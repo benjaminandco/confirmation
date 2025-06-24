@@ -14,19 +14,19 @@
       background: url('thankyou.png') no-repeat center center fixed;
       background-size: cover;
     }
-    a.fullscreen-link {
+    a.insta-hotspot {
       position: absolute;
-      bottom: 80px; /* Pas dit aan om precies over je @benjaminandco te liggen */
+      bottom: 48px; /* pas aan indien de klikzone hoger/lager moet */
       left: 50%;
       transform: translateX(-50%);
-      width: 250px; /* breedte van de klikbare zone */
-      height: 30px;  /* hoogte van de klikbare zone */
+      width: 170px;  /* breedte van de zone */
+      height: 20px;  /* hoogte van de zone */
       display: block;
-      z-index: 10;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <a class="fullscreen-link" href="https://www.instagram.com/benjaminandco.eu/" target="_blank" title="@benjaminandco"></a>
+  <a class="insta-hotspot" href="https://www.instagram.com/benjaminandco.eu/" target="_blank"></a>
 </body>
 </html>
