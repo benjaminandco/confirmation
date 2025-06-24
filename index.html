@@ -13,12 +13,12 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 100dvh; /* betere ondersteuning voor mobiel */
+      height: 100dvh; /* mobiele fix */
     }
 
     body {
-      background: url('thankyou.png') no-repeat center center;
-      background-size: contain;
+      background: url('thankyou.png') no-repeat center center fixed;
+      background-size: cover;
       background-color: #ffffff;
     }
 
@@ -34,10 +34,6 @@
     }
 
     @media (min-width: 769px) {
-      body {
-        background-size: cover;
-      }
-
       .insta-link {
         bottom: 5%;
         width: 200px;
