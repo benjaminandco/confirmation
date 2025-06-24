@@ -10,23 +10,39 @@
       padding: 0;
       height: 100%;
     }
+
     body {
       background: url('thankyou.png') no-repeat center center fixed;
       background-size: cover;
     }
-    a.insta-hotspot {
+
+    .insta-link {
       position: absolute;
-      bottom: 30px; /* lager zetten indien nodig */
-      left: 53%;     /* meer naar rechts */
+      bottom: 30px;
+      left: 53%;
       transform: translateX(-50%);
-      width: 200px;  /* eventueel aanpassen als de tekst langer is */
-      height: 25px;  /* hoogte van klikzone */
+      width: 200px;
+      height: 30px;
       display: block;
-      z-index: 999;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .insta-link {
+        bottom: 18vh;
+        left: 50%;
+        width: 160px;
+        height: 25px;
+      }
     }
   </style>
 </head>
 <body>
-  <a class="insta-hotspot" href="https://www.instagram.com/benjaminandco.eu/" target="_blank"></a>
+  <a href="https://www.instagram.com/benjaminandco.eu/" class="insta-link" target="_blank" aria-label="Instagram link"></a>
 </body>
 </html>
