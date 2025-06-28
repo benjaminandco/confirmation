@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.7"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.7" />
   <title>Thank You | BÉNJAMIN&CO</title>
   <style>
     html, body {
@@ -14,8 +14,13 @@
 
     body {
       background: url('thankyou.png') no-repeat center center fixed;
-      background-size: contain;
+      background-size: cover;
       background-color: white;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
     }
 
     .insta-link {
@@ -35,9 +40,19 @@
         height: 30px;
       }
     }
+
+    /* 🔍 Handmatige zoom voor mobiele schermen */
+    @media (max-width: 767px) {
+      .page-wrapper {
+        transform: scale(1.1); /* Pas dit aan voor meer/minder zoom */
+        transform-origin: top center;
+      }
+    }
   </style>
 </head>
 <body>
-  <a href="https://www.instagram.com/benjaminandco.eu/" class="insta-link" target="_blank" aria-label="Instagram link"></a>
+  <div class="page-wrapper">
+    <a href="https://www.instagram.com/benjaminandco.eu/" class="insta-link" target="_blank" aria-label="Instagram link"></a>
+  </div>
 </body>
 </html>
