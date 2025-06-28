@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You're Officially In</title>
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,22 +11,26 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: #fff;
       color: #000;
-      text-align: center;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      justify-content: space-between;
+      text-align: center;
     }
 
     .logo {
       font-weight: bold;
-      font-size: 2.5rem;
-      margin-top: 20px;
+      font-size: 2.8rem;
+      margin: 2rem 0 1rem;
       letter-spacing: 1px;
     }
 
@@ -35,54 +39,55 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 20px;
+      padding: 1rem;
     }
 
     .main-message {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 600;
-      margin-top: 60px;
+      margin-bottom: 2rem;
     }
 
     .sub-message {
-      margin-top: 200px;
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
 
     .footer {
-      font-size: 0.9rem;
-      padding: 20px;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
     }
 
     .instagram {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
-      margin-top: 10px;
+      gap: 10px;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
     }
-    .fa-instagram:before {
-    content: "\f16d";
-    background: black;
-    color: white;
-    padding: 5px;
-    border-radius: 50%;
-    /* margin-bottom: 10px; */
-}
-
 
     .instagram i {
       font-size: 1rem;
+      background: black;
+      color: white;
+      padding: 6px;
+      border-radius: 50%;
     }
 
-    @media (max-width: 600px) {
+    .footer-text {
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
       .logo {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
       }
 
       .main-message {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
 
       .sub-message {
@@ -90,11 +95,29 @@
       }
 
       .footer {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.7rem;
       }
 
-      .instagram i {
-        font-size: 0.9rem;
+      .main-message {
+        font-size: 1.4rem;
+      }
+
+      .sub-message {
+        font-size: 0.95rem;
+      }
+
+      .instagram span {
+        font-size: 0.85rem;
+      }
+
+      .footer-text {
+        font-size: 0.75rem;
       }
     }
   </style>
@@ -112,8 +135,7 @@
       <i class="fab fa-instagram"></i>
       <span>FOLLOW US @benjaminandco.eu</span>
     </div>
-    <div style="
-    margin: 10px;" >for exclusive sneak peeks and behind the scenes.</div>
+    <div class="footer-text">for exclusive sneak peeks and behind the scenes.</div>
   </div>
 </body>
 </html>
