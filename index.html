@@ -1,43 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You | BÉNJAMIN&CO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Officially In</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
     }
 
     body {
-      background: url('thankyou.png') no-repeat center center fixed;
-      background-size: cover;
-      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
     }
 
-    .insta-link {
-      position: absolute;
-      bottom: 9%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 160px;
-      height: 25px;
-      display: block;
+    .logo {
+      margin-top: 40px;
     }
 
-    @media (min-width: 768px) {
-      .insta-link {
-        bottom: 5%;
-        width: 200px;
-        height: 30px;
+    .logo img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    .container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .main-message {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 40px;
+    }
+
+    .sub-message {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 150px;
+    }
+
+    .footer {
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .instagram {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .instagram i {
+      font-size: 1rem;
+      background: black;
+      color: white;
+      padding: 6px;
+      border-radius: 50%;
+    }
+
+    .instagram a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+    }
+
+    .instagram a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-text {
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        max-width: 350px;
+      }
+
+      .main-message {
+        font-size: 1.4rem;
+      }
+
+      .sub-message {
+        font-size: 1.2rem;
+        margin-top: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        max-width: 250px;
+      }
+
+      .main-message {
+        font-size: 1.2rem;
+      }
+
+      .sub-message {
+        font-size: 1rem;
+        margin-top: 80px;
+      }
+
+      .instagram a {
+        font-size: 0.85rem;
+      }
+
+      .footer-text {
+        font-size: 0.75rem;
       }
     }
   </style>
 </head>
+
 <body>
-  <a href="https://www.instagram.com/benjaminandco.eu/" class="insta-link" target="_blank" aria-label="Instagram link"></a>
+
+  <!-- Logo Image -->
+  <div class="logo">
+    <img src="logo.jpg" alt="Benjamin & Co Logo">
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="main-message">You’re Officially In.</div>
+    <div class="sub-message">We‘ll be in touch when it’s time</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="instagram">
+      <i class="fab fa-instagram"></i> FOLLOW US
+      <a href="https://www.instagram.com/benjaminandco.eu/" target="_blank">@benjaminandco.eu</a>
+    </div>
+    <div class="footer-text">for exclusive sneak peeks and behind the scenes.</div>
+  </div>
+
 </body>
+
 </html>
